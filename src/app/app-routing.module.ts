@@ -11,17 +11,17 @@ const routes: Routes = [
   {
     path: 'auth',
     component: AuthLayoutComponent,
-    loadChildren: './pages/auth/auth.module#AuthModule'
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'dashboard',
     component: DashboardLayoutComponent,
-    loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
     path: '',
     component: MainLayoutComponent,
-    loadChildren: './pages/main/main.module#MainModule'
+    loadChildren: () => import('./pages/main/main.module').then(m => m.MainModule)
   },
   // Fallback when no prior route is matched
   { path: '**', redirectTo: '', pathMatch: 'full' }
