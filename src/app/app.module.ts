@@ -39,9 +39,9 @@ registerLocaleData(localeEn, 'en');
     NgbModule,
     CoreModule,
     SharedModule,
-    ShellModule,
-    HomeModule,
-    LoginModule,
+    // ShellModule,
+    // HomeModule,
+    // LoginModule,
     Angulartics2Module.forRoot(),
     AppRoutingModule // must be imported as the last module as it contains the fallback route
   ],
